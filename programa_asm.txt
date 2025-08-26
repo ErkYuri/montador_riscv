@@ -1,0 +1,13 @@
+lh x1, 4(x0)
+add x2, x1, x0
+add x1, x1, x2
+add x1, x1, x2
+andi x1, x1, 0
+andi x1, x1, 0
+bne x1, x2, SAIDA
+add x1, x1, x1
+sh x1, 0(x0)
+SAIDA:
+andi x1, x1, x2
+or x1, x1, x0
+sh x1, 0(x0)
